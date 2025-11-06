@@ -1,0 +1,24 @@
+#Définir un nom
+name: CI
+
+#Définir les triggers
+on: 
+    push:
+        branches: [main]
+
+jobs:
+    #Définir un runner
+    build: 
+        runs-on: ubuntu-latest
+        #pip line
+        steps:
+            #1-Récuperer le code
+            - name: Récuperer le code source
+              uses: actions/checkout@v5
+            
+    #construire l'image
+
+    #se connecter à dockerhub
+
+
+    #pousser l'image
