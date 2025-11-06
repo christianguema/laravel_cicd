@@ -15,6 +15,10 @@ jobs:
             #1-Récuperer le code
             - name: Récuperer le code source
               uses: actions/checkout@v5
+            #-2 exécuter les tes
+            - name: Run test
+              run: cd app && php artisan test
+
             
     #construire l'image
 
