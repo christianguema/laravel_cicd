@@ -1,0 +1,6 @@
+#Definir des services app et db
+services:
+  app:
+    build: . # Créer une image à partir du Dockerfile courant
+
+
