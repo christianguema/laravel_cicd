@@ -17,7 +17,7 @@ jobs:
               uses: actions/checkout@v5
             #-2 exécuter les tes
             - name: Run test
-              run: cd app && composer install && cp .en.example .env && php artisan key:gen && php artisan test
+              run: cd app && composer install && cp .env.example .env && php artisan key:gen && php artisan test
 
             
     #construire l'image
