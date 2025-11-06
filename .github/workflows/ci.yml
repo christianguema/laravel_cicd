@@ -13,7 +13,7 @@ jobs:
         #pip line
         steps:
             #1-Récuperer le code
-            - name: Récuperer le code source
+            - name: Checkout to souce code
               uses: actions/checkout@v5
             #-2 exécuter les tes
             - name: Run test
@@ -21,3 +21,9 @@ jobs:
             #3- Construire l'image
             - name: Build app image
               run: docker build -t christianfdd/laravelcicd:latest .
+            #4- se connecté à docherhub
+            - name: Connect to Docker hub
+              uses: docker/login-action@v2
+              with:
+                username: ${{ secrets.DOCKER_USERNAME }}
+                password: ${{ secrets.DOCKER_TOKEN }}
